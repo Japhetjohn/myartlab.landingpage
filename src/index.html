@@ -1,15 +1,210 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Landing Page</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MyArteLab - Built for Creators. Trusted by Clients. A creative marketplace platform for African photographers and visual designers.">
+    <title>MyArteLab - Creative Marketplace for African Visual Artists</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="min-h-screen bg-gray-100 flex items-center justify-center">
-    <h1 class="text-4xl font-bold text-blue-500">Welcome to My Landing Page</h1>
-  </div>
-  <script type="module" src="main.js"></script> <!-- Relative path to src/main.js -->
+    <!-- Navigation -->
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <div class="container nav-container">
+            <div class="nav-brand">
+                <img src="/logo.PNG" alt="MyArteLab Logo" class="logo" loading="eager">
+            </div>
+            <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+            </button>
+            <div class="nav-menu">
+                <a href="#hero" class="nav-link">Home</a>
+                <a href="#problem" class="nav-link">Challenge</a>
+                <a href="#solution" class="nav-link">Solution</a>
+                <a href="#why" class="nav-link">Why Us</a>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSdJOgX5bvSFCyqlwJlYeVa0vs3arOdOaW6_CUEj1IGqcT5vlA/viewform?usp=header" class="btn-primary nav-cta" target="_blank" rel="noopener">Join Waitlist</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section" aria-labelledby="hero-title">
+        <div class="hero-background">
+            <div class="animated-images-container" id="animatedImages">
+                <div class="hero-image active" style="background-image: url('/theregisti-ziSzilQLSOM-unsplash.jpg')"></div>
+                <div class="hero-image" style="background-image: url('/nubelson-fernandes-ZdOsQiwp0Ss-unsplash.jpg')"></div>
+                <div class="hero-image" style="background-image: url('/videodeck-co-GRUhkcD9k8o-unsplash.jpg')"></div>
+                <div class="hero-image" style="background-image: url('/andres-mfWsMDdN-Ro-unsplash.jpg')"></div>
+            </div>
+            <div class="hero-overlay"></div>
+        </div>
+        
+        <div class="container hero-content">
+            <div class="hero-text reveal-element">
+                <h1 id="hero-title" class="hero-title">
+                    <span class="title-line">MyArteLab</span>
+                </h1>
+                <p class="hero-subtitle">Built for Creators. Trusted by Clients.</p>
+                <p class="hero-description">
+                    MyArteLab is a creative marketplace that connects African photographers and visual designers with clients who value authentic, high-quality work. We empower creators to showcase their portfolios, set their rates, and get hired—while giving clients access to a curated network of talented professionals across the continent.
+                </p>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSdJOgX5bvSFCyqlwJlYeVa0vs3arOdOaW6_CUEj1IGqcT5vlA/viewform?usp=header" class="btn-primary btn-hero" target="_blank" rel="noopener">
+                    Join the Waitlist
+                    <span class="btn-glow"></span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator">
+            <div class="scroll-icon"></div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section id="problem" class="problem-section section-padding" aria-labelledby="problem-title">
+        <div class="container">
+            <div class="section-content reveal-element">
+                <h2 id="problem-title" class="section-title">The Challenge</h2>
+                <div class="problem-content glass-card">
+                    <p class="large-text">African creators are among the most talented in the world, but they face significant barriers: limited visibility, difficulty finding reliable clients, underpricing due to lack of market standards, and navigating inconsistent payment systems. Meanwhile, clients struggle to discover and hire skilled local creatives, often resorting to international platforms that don't reflect African talent or culture.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section id="solution" class="solution-section section-padding" aria-labelledby="solution-title">
+        <div class="container">
+            <div class="section-content reveal-element">
+                <h2 id="solution-title" class="section-title">Our Solution</h2>
+                <p class="section-intro">MyArteLab bridges the gap by creating a trusted, transparent ecosystem where African visual creators can thrive and clients can access top-tier talent with confidence.</p>
+                
+                <div class="solution-grid">
+                    <div class="solution-card glass-card reveal-element">
+                        <div class="card-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                        </div>
+                        <h3 class="card-title">For Clients</h3>
+                        <ul class="feature-list">
+                            <li>Browse curated portfolios of verified African photographers and designers</li>
+                            <li>Filter by location, style, expertise, and budget</li>
+                            <li>Book talent directly through a secure, streamlined platform</li>
+                            <li>Access transparent pricing and clear project timelines</li>
+                            <li>Manage projects, contracts, and payments all in one place</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="solution-card glass-card reveal-element">
+                        <div class="card-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"></rect>
+                                <line x1="7" y1="2" x2="7" y2="22"></line>
+                                <line x1="17" y1="2" x2="17" y2="22"></line>
+                                <line x1="2" y1="12" x2="22" y2="12"></line>
+                                <line x1="2" y1="7" x2="7" y2="7"></line>
+                                <line x1="2" y1="17" x2="7" y2="17"></line>
+                                <line x1="17" y1="17" x2="22" y2="17"></line>
+                                <line x1="17" y1="7" x2="22" y2="7"></line>
+                            </svg>
+                        </div>
+                        <h3 class="card-title">For Creators</h3>
+                        <ul class="feature-list">
+                            <li>Build a professional portfolio that showcases your best work</li>
+                            <li>Set your own rates based on your experience and market value</li>
+                            <li>Get discovered by clients actively looking for your skills</li>
+                            <li>Receive secure payments with full transparency</li>
+                            <li>Grow your reputation through client reviews and repeat bookings</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Section -->
+    <section id="why" class="why-section section-padding" aria-labelledby="why-title">
+        <div class="container">
+            <div class="section-content reveal-element">
+                <h2 id="why-title" class="section-title">Why MyArteLab</h2>
+                
+                <div class="why-grid">
+                    <div class="why-card glass-card reveal-element">
+                        <div class="why-number">01</div>
+                        <h3 class="why-card-title">Africa-First</h3>
+                        <p class="why-card-text">We celebrate and center African creativity, culture, and craftsmanship</p>
+                    </div>
+                    
+                    <div class="why-card glass-card reveal-element">
+                        <div class="why-number">02</div>
+                        <h3 class="why-card-title">Verified Talent</h3>
+                        <p class="why-card-text">Every creator is vetted to ensure quality and professionalism</p>
+                    </div>
+                    
+                    <div class="why-card glass-card reveal-element">
+                        <div class="why-number">03</div>
+                        <h3 class="why-card-title">Fair Pricing</h3>
+                        <p class="why-card-text">Transparent rates that respect the value of creative work</p>
+                    </div>
+                    
+                    <div class="why-card glass-card reveal-element">
+                        <div class="why-number">04</div>
+                        <h3 class="why-card-title">Seamless Experience</h3>
+                        <p class="why-card-text">From discovery to delivery, everything happens on one intuitive platform</p>
+                    </div>
+                    
+                    <div class="why-card glass-card reveal-element">
+                        <div class="why-number">05</div>
+                        <h3 class="why-card-title">Community-Driven</h3>
+                        <p class="why-card-text">We're building more than a marketplace—we're building a movement</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section id="cta" class="cta-section section-padding" aria-labelledby="cta-title">
+        <div class="cta-background">
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+        </div>
+        <div class="container">
+            <div class="cta-content reveal-element">
+                <h2 id="cta-title" class="cta-title">Join the Movement</h2>
+                <p class="cta-text">Whether you're a creator ready to share your work with the world or a client looking for exceptional African talent, MyArteLab is your launchpad. Be part of a platform that's reshaping how creative work is valued, discovered, and celebrated across Africa.</p>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSdJOgX5bvSFCyqlwJlYeVa0vs3arOdOaW6_CUEj1IGqcT5vlA/viewform?usp=header" class="btn-primary btn-cta" target="_blank" rel="noopener">
+                    Join the Waitlist
+                    <span class="btn-glow"></span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="/logo.PNG" alt="MyArteLab Logo" class="footer-logo">
+                    <p class="footer-tagline">Built for Creators. Trusted by Clients.</p>
+                </div>
+                <div class="footer-copyright">
+                    <p>&copy; 2025 MyArteLab. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="main.js"></script>
 </body>
 </html>

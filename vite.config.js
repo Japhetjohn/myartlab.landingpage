@@ -4,17 +4,23 @@ import tailwindcss from 'tailwindcss';
 import autoprefixer from 'autoprefixer';
 
 export default defineConfig({
-  root: 'src', // Project root
-  publicDir: 'public', // Photos are in src/public
+  root: 'src', // Ensure root is 'src'
+  publicDir: 'public',
   base: '/',
 
   server: {
-    open: true, // Opens the default entry point (index.html in src)
+    open: true,
+    host: '0.0.0.0',
+    port: 5173,
+    strictPort: true,
   },
 
   css: {
     postcss: {
-      plugins: [tailwindcss, autoprefixer],
+      plugins: [
+        tailwindcss('./tailwind.config.cjs'), // Using .cjs for now
+        autoprefixer(),
+      ],
     },
   },
 
@@ -23,7 +29,7 @@ export default defineConfig({
     emptyOutDir: true,
     rollupOptions: {
       input: {
-        main: 'index.html', // Entry point in src
+        main: new URL('src/index.html', import.meta.url).pathname, // Dynamic path resolution
       },
     },
   },
